@@ -1,0 +1,291 @@
+:root {
+  --v4-ink: #081528;
+  --v4-ink-soft: #0c1d36;
+  --v4-paper: #f6f4ee;
+  --v4-gold: #ddc77d;
+  --v4-gold-dark: #9d7b24;
+}
+
+html,
+body {
+  background: var(--v4-ink);
+}
+
+body {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+header {
+  color: #ffffff;
+  background: rgba(8, 21, 40, 0.97);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom: 1px solid rgba(221, 199, 125, 0.24);
+}
+
+header nav ul li a { color: rgba(255, 255, 255, 0.84); }
+header nav ul li a:hover { color: var(--v4-gold); }
+.header-logo img { filter: brightness(0) invert(1); opacity: 0.94; }
+.header-tel-block { border-color: rgba(221, 199, 125, 0.58); background: rgba(8, 21, 40, 0.5); }
+.header-tel { color: #ffffff; }
+.header-tel-sub { color: rgba(255, 255, 255, 0.6); }
+.header-consult-btn {
+  color: #ffffff;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.header-consult-btn:hover { color: #ffffff; background: var(--navy-light); border-color: var(--navy-light); }
+
+.header-consult-btn .header-consult-sub {
+  color: rgba(255, 255, 255, 0.85);
+}
+ 
+
+.page-hero {
+  background: var(--v4-ink);
+  border-bottom: 1px solid rgba(221, 199, 125, 0.22);
+}
+
+.page-hero::before {
+  inset: 0;
+  width: auto;
+  height: auto;
+  transform: none;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(221, 199, 125, 0.055) 50%, transparent 100%);
+}
+
+.page-hero-label,
+.section-label { color: var(--v4-gold); }
+
+.page-hero-title { color: #ffffff; }
+
+.section,
+.advisor-section,
+.fee-section,
+.contact-section,
+.privacy-section,
+.guideline-section,
+.service-intro,
+.flow-section,
+.company-section {
+  background: var(--v4-ink) !important;
+}
+
+.section + .section,
+.service-intro + .section,
+.flow-overview + .flow-section,
+.company-section + .section {
+  border-top: 1px solid rgba(221, 199, 125, 0.14);
+}
+
+.service-intro .section-title,
+.section > .section-inner > .section-header .section-title,
+.flow-section .section-title,
+.strengths-lead,
+.advisor-catch,
+.advisor-name,
+.company-section .section-title,
+.contact-section .section-title {
+  color: #ffffff;
+}
+
+/* Strengths */
+.strengths-lead-sub,
+.strength-body p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.strength-item {
+  margin-bottom: 24px;
+  padding: 44px 48px;
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border: 1px solid rgba(221, 199, 125, 0.32);
+  border-top-color: var(--v4-gold);
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.16);
+}
+
+.strength-item:last-child { margin-bottom: 0; padding-bottom: 44px; }
+.strength-item .strength-title,
+.strength-item .strength-body p { color: var(--v4-ink); }
+
+/* Service */
+.service-intro { border-bottom: 1px solid rgba(221, 199, 125, 0.14); }
+.service-intro p { color: rgba(255, 255, 255, 0.72); }
+.service-list { gap: 18px; background: transparent; }
+.service-item {
+  background: var(--v4-paper);
+  border: 1px solid rgba(221, 199, 125, 0.32);
+  border-top-color: var(--v4-gold);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+}
+.service-item-title { color: var(--v4-ink); }
+.service-item-desc,
+.service-item-points li { color: #4f5b69; }
+.service-item-points li { border-bottom-color: rgba(8, 21, 40, 0.11); }
+
+.flow-overview {
+  background: var(--v4-ink-soft);
+  border-top: 1px solid rgba(221, 199, 125, 0.2);
+  border-bottom: 1px solid rgba(221, 199, 125, 0.2);
+}
+.flow-step { background: rgba(255, 255, 255, 0.045); border-color: rgba(255, 255, 255, 0.12); }
+.flow-step:not(:last-child)::after { background: var(--v4-ink-soft); }
+.flow-tabs { border-bottom-color: rgba(255, 255, 255, 0.16); }
+.flow-tab { color: rgba(255, 255, 255, 0.52); }
+.flow-tab.active { color: var(--v4-gold); }
+.flow-detail-list { gap: 18px; }
+.flow-detail-item {
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-color: rgba(221, 199, 125, 0.32);
+  border-top-color: var(--v4-gold);
+}
+.flow-detail-title { color: var(--v4-ink); }
+.flow-detail-desc { color: #4f5b69; }
+
+/* Advisor */
+.advisor-catch-sub,
+.advisor-message { color: rgba(255, 255, 255, 0.76); }
+.advisor-title,
+.advisor-name-en { color: var(--v4-gold); }
+.advisor-photo img { border: 1px solid rgba(221, 199, 125, 0.34); }
+.advisor-career {
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-top: 1px solid var(--v4-gold);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+}
+.advisor-career-title { color: var(--v4-ink); }
+.advisor-career p { color: #4f5b69; }
+.advisor-result-box {
+  background: #ffffff;
+  border: 1px solid rgba(221, 199, 125, 0.25);
+  border-top-color: var(--v4-gold);
+}
+
+/* Fees */
+.fee-hero-box,
+.fee-block {
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-top: 1px solid var(--v4-gold);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.17);
+}
+.fee-hero-box h2 { color: var(--v4-ink); }
+.fee-hero-box > p { color: #4f5b69; }
+.fee-block { padding: 40px 44px; }
+.fee-block-title { color: var(--v4-ink); }
+.fee-block-title .tag,
+.fee-table th { background: var(--v4-ink-soft); }
+.fee-free-item { background: var(--v4-ink-soft); border-color: rgba(221, 199, 125, 0.24); }
+.fee-table td { color: #3f4a58; border-bottom-color: rgba(8, 21, 40, 0.11); }
+.fee-table tr:nth-child(even) td { background: rgba(255, 255, 255, 0.54); }
+.fee-note { color: #6a717a; }
+.fee-success-box { background: #ffffff; }
+
+/* Company */
+.company-section .company-table tr { border-bottom-color: rgba(255, 255, 255, 0.14); }
+.company-section .company-table th { color: var(--v4-gold); }
+.company-section .company-table td { color: rgba(255, 255, 255, 0.84); }
+.company-section .company-table small { color: rgba(255, 255, 255, 0.5) !important; }
+.company-section .zoom-img { border: 1px solid rgba(221, 199, 125, 0.3); border-radius: 0; }
+.company-section .btn-outline-navy {
+  color: #ffffff;
+  border-color: rgba(221, 199, 125, 0.64);
+}
+.company-section .btn-outline-navy:hover { color: var(--v4-ink); background: var(--v4-gold); border-color: var(--v4-gold); }
+
+.company-section + .section .section-inner {
+  padding: 48px;
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-top: 1px solid var(--v4-gold);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+}
+.company-section + .section .section-title { color: var(--v4-ink); }
+.company-section + .section p { color: #4f5b69 !important; }
+.company-section + .section .company-map iframe { filter: none; }
+
+/* Contact */
+.contact-info-item { border-bottom-color: rgba(255, 255, 255, 0.14); }
+.contact-info > p { color: rgba(255, 255, 255, 0.7) !important; }
+.contact-info-value { color: rgba(255, 255, 255, 0.9); }
+.contact-form-wrap {
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-color: rgba(221, 199, 125, 0.34);
+  border-top-color: var(--v4-gold);
+  border-radius: 2px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* Policy and guideline documents */
+.privacy-content,
+.guideline-document {
+  padding: 56px 64px;
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-top: 1px solid var(--v4-gold);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+}
+.privacy-block h2,
+.guideline-document h2,
+.guideline-document h3 { color: var(--v4-ink); }
+.privacy-block p,
+.privacy-block li,
+.guideline-document { color: #46515f; }
+.privacy-block + .privacy-block { border-top: 1px solid rgba(8, 21, 40, 0.1); padding-top: 36px; }
+.guideline-intro {
+  color: var(--v4-ink);
+  background: var(--v4-paper);
+  border-left-color: var(--v4-gold);
+}
+.guideline-item { border-bottom-color: rgba(8, 21, 40, 0.11); }
+.guideline-note { background: #ffffff; }
+
+.cta-section {
+  background: var(--v4-ink-soft);
+  border-top: 1px solid rgba(221, 199, 125, 0.22);
+}
+
+footer { background: #050f21; }
+
+@media (max-width: 900px) {
+  .nav-toggle span { background: #ffffff; }
+  .mobile-nav { background: var(--v4-ink); border-top: 1px solid rgba(221, 199, 125, 0.2); box-shadow: none; }
+  .mobile-nav ul li a { color: rgba(255, 255, 255, 0.88); border-bottom-color: rgba(255, 255, 255, 0.12); }
+  .mobile-nav .mobile-nav-cta { background: var(--v4-ink-soft); }
+  .mobile-nav .mobile-nav-consult-btn { color: var(--v4-ink); background: var(--v4-gold); }
+
+  .page-hero { padding: 132px 24px 66px; }
+  .page-hero-title { font-size: 26px; }
+
+  .strength-item,
+  .fee-block,
+  .privacy-content,
+  .guideline-document,
+  .company-section + .section .section-inner {
+    padding: 28px 20px;
+  }
+
+  .strength-item { margin-bottom: 18px; }
+  .strength-item:last-child { padding-bottom: 28px; }
+  .service-list { gap: 14px; }
+  .service-item { padding: 30px 22px; }
+  .service-item-points li { white-space: normal; }
+  .flow-detail-list { grid-template-columns: 1fr; }
+  .advisor-profile { gap: 30px; }
+  .advisor-career { padding: 30px 22px; }
+  .fee-hero-box { padding: 32px 20px; }
+  .fee-block { margin-bottom: 28px; overflow-x: auto; }
+  .company-section + .section { padding: 54px 24px !important; }
+  .contact-form-wrap { padding: 32px 20px; }
+  .guideline-intro { padding: 22px 20px; }
+  .guideline-document { padding-left: 18px; padding-right: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { transition: none; }
+}
