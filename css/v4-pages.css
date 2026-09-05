@@ -297,7 +297,17 @@ footer { background: #050f21; }
   .service-item { padding: 30px 22px; }
   .service-item-points li { white-space: normal; }
   .flow-detail-list { grid-template-columns: 1fr; }
-  .advisor-profile { gap: 30px; }
+  .advisor-profile { gap: 36px; }
+  .advisor-photo {
+    width: 180px;
+    height: 216px;
+    margin: 0 auto;
+  }
+  .advisor-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
   .advisor-career { padding: 30px 22px; }
   .fee-hero-box { padding: 32px 20px; }
   .fee-block { margin-bottom: 28px; overflow-x: auto; }
