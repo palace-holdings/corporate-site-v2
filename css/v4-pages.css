@@ -3,7 +3,7 @@
   --v4-ink-soft: #0c1d36;
   --v4-paper: #f6f4ee;
   --v4-gold: #ddc77d;
-  --v4-gold-dark: #9d7b24;
+  --v4-gold-dark: #87691d;
 }
 
 html,
@@ -110,6 +110,15 @@ header nav ul li a:hover { color: var(--v4-gold); }
 .strength-item .strength-title,
 .strength-item .strength-body p { color: var(--v4-ink); }
 
+.strength-item .strength-num,
+.service-item-num,
+.flow-detail-num,
+.guideline-document .guideline-num,
+.guideline-document .guideline-item .inline-marker,
+.guideline-document .guideline-item li::before {
+  color: var(--v4-gold-dark);
+}
+
 /* Service */
 .service-intro { border-bottom: 1px solid rgba(221, 199, 125, 0.14); }
 .service-intro p { color: rgba(255, 255, 255, 0.72); }
@@ -166,6 +175,16 @@ header nav ul li a:hover { color: var(--v4-gold); }
 }
 
 /* Fees */
+.fee-side-link {
+  display: inline-block;
+  padding: 8px 0;
+  color: var(--v4-gold);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.fee-side-link:hover,
+.fee-side-link:focus-visible { color: #ffffff; }
+
 .fee-hero-box,
 .fee-block {
   color: var(--v4-ink);
@@ -177,6 +196,7 @@ header nav ul li a:hover { color: var(--v4-gold); }
 .fee-hero-box > p { color: #4f5b69; }
 .fee-block { padding: 40px 44px; }
 .fee-block-title { color: var(--v4-ink); }
+.fee-block-title .tag-buy { color: var(--v4-ink); }
 .fee-block-title .tag,
 .fee-table th { background: var(--v4-ink-soft); }
 .fee-free-item { background: var(--v4-ink-soft); border-color: rgba(221, 199, 125, 0.24); }
@@ -205,6 +225,7 @@ header nav ul li a:hover { color: var(--v4-gold); }
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
 }
 .company-section + .section .section-title { color: var(--v4-ink); }
+.company-section + .section .section-label { color: var(--v4-gold-dark); }
 .company-section + .section p { color: #4f5b69 !important; }
 .company-section + .section .company-map iframe { filter: none; }
 

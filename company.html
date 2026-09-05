@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W23X70DLMN"></script>
   <script>
@@ -9,7 +10,6 @@
     gtag('js', new Date());
     gtag('config', 'G-W23X70DLMN');
   </script>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com https://docs.google.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.analytics.google.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -29,7 +29,7 @@
   <a href="index.html" class="header-logo">
     <img src="assets/images/企業ロゴ_完全透過_ネイビー.png" alt="PALACE HOLDINGS">
   </a>
-  <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="メニュー" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
   <div class="header-right">
     <div class="header-cta">
       <div class="header-tel-block">
@@ -50,7 +50,7 @@
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" inert>
   <ul>
     <li><a href="service.html">M&amp;Aサービス</a></li>
     <li><a href="strengths.html">当社の強み・特徴</a></li>
@@ -125,7 +125,7 @@
     <h2 class="section-title">アクセス</h2>
     <p style="font-size:14px;color:#555;margin-bottom:24px;">〒105-0001　東京都港区虎ノ門4-3-20　神谷町MTビル14F<br>東京メトロ日比谷線「神谷町駅」4b出口より徒歩1分</p>
     <div style="width:100%;height:400px;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.54827417036!2d139.74195147710373!3d35.66349963094568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b0036cb3ebf%3A0x29ab6bb81b6a5f85!2z44ix44OR44Os44K544Ob44O844Or44OH44Kj44Oz44Kw44K5!5e0!3m2!1sja!2sjp!4v1775643351491!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe title="パレスホールディングス所在地の地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.54827417036!2d139.74195147710373!3d35.66349963094568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b0036cb3ebf%3A0x29ab6bb81b6a5f85!2z44ix44OR44Os44K544Ob44O844Or44OH44Kj44Oz44Kw44K5!5e0!3m2!1sja!2sjp!4v1775643351491!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
@@ -177,21 +177,6 @@
   <span class="mbb-arrow">&#10132;</span>
 </a>
 
-<script>
-  document.getElementById("navToggle").addEventListener("click",function(){
-    document.getElementById("mobileNav").classList.toggle("open");
-  });
-  var mbb=document.querySelector(".mobile-bottom-banner");
-  if(mbb){window.addEventListener("scroll",function(){mbb.classList.toggle("visible",window.scrollY>200);});}
-
-  // Scroll fade-in
-  var fadeEls=document.querySelectorAll(".fade-in");
-  if(fadeEls.length){
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});
-    },{threshold:0.15});
-    fadeEls.forEach(function(el){obs.observe(el);});
-  }
-</script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

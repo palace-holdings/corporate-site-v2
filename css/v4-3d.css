@@ -103,8 +103,7 @@ header nav ul li a:hover { color: #ddc77d; }
 .hero-inner { position: relative; z-index: 3; }
 .hero-content { max-width: 920px; }
 .hero-frame-border,
-.hero-frame-corner,
-.hero-scroll { z-index: 4; }
+.hero-frame-corner { z-index: 4; }
 .hero-watermark { display: none !important; }
 
 .hero-kicker { color: #ddc77d; }
@@ -390,7 +389,7 @@ header nav ul li a:hover { color: #ddc77d; }
   grid-column: 1;
   grid-row: 1;
   margin: 48px 44px 12px;
-  color: #ddc77d;
+  color: #87691d;
 }
 
 .company-access > .section-title {

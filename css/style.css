@@ -1,6 +1,22 @@
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+button.flow-tab { background: transparent; border: 0; border-bottom: 3px solid transparent; font-family: inherit; }
+.service-item[id] { scroll-margin-top: 150px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-title, .hero-desc, .hero-kicker, .hero-btns {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ===== RESPONSIVE HELPERS ===== */
 .sp-only { display: none; }
 .pc-only { display: inline; }
@@ -26,8 +42,8 @@
 
 /* ===== SCROLL FADE-IN ===== */
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .fade-in.visible {
@@ -1081,12 +1097,14 @@ a.contact-info-value:hover { color: var(--gold); }
   .footer-nav-main .footer-nav-inline { display: flex; justify-content: center; gap: 16px; width: 100%; }
   .footer-nav-main .footer-nav-inline a { width: auto; display: inline-block; }
   .footer-nav-sub a { white-space: normal; text-align: center; }
-  .footer-copy { font-size: 11px; white-space: nowrap; }
+  .footer-copy { font-size: 11px; white-space: normal; text-wrap: balance; }
   .contact-layout { grid-template-columns: 1fr; gap: 40px; }
   .contact-form-wrap { padding: 32px 20px; }
   .page-hero { padding: 110px 24px 60px; }
   .page-hero-title { font-size: 26px; }
   .cta-section { padding: 60px 24px; }
+  .cta-section .section-title { text-wrap: balance; }
+  .fee-table td:first-child { text-wrap: balance; }
   .cta-btns { flex-direction: column; align-items: center; }
 
   /* モバイル下部固定バナー */
@@ -1148,11 +1166,6 @@ a.contact-info-value:hover { color: var(--gold); }
   footer { padding-bottom: 64px; }
 }
 
-/* ============================================================
-   V3 LUXURY LAYER — 2026 editorial luxury refinement
-   既存クラスをカスケードで上書きする追加レイヤー。
-   ============================================================ */
-
 /* ----- Global refinement ----- */
 ::selection { background: var(--gold); color: var(--ink); }
 body { color: #2B2F36; }
@@ -1210,14 +1223,15 @@ a:focus-visible, button:focus-visible {
 
 /* ----- Scroll reveal: blur + rise ----- */
 .fade-in {
-  opacity: 0;
-  transform: translateY(34px);
-  filter: blur(8px);
+  opacity: 1;
+  transform: none;
+  filter: none;
   transition:
     opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
     transform 1s cubic-bezier(0.22, 0.61, 0.36, 1),
     filter 1s ease;
 }
+.fade-in.is-observed { opacity: 0; transform: translateY(34px); }
 .fade-in.visible { opacity: 1; transform: translateY(0); filter: blur(0); }
 
 /* ----- Header: frosted glass ----- */
@@ -1347,39 +1361,6 @@ nav ul li a:hover::after { width: 100%; }
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
-}
-
-.hero-scroll {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  pointer-events: none;
-}
-.hero-scroll span {
-  font-family: var(--font-en);
-  font-size: 11px;
-  letter-spacing: 0.38em;
-  text-indent: 0.38em;
-  color: rgba(255, 255, 255, 0.55);
-  text-transform: uppercase;
-}
-.hero-scroll::after {
-  content: '';
-  width: 1px;
-  height: 64px;
-  background: linear-gradient(to bottom, var(--gold) 50%, rgba(255,255,255,0.18) 50%);
-  background-size: 100% 200%;
-  animation: heroScrollLine 2.4s ease-in-out infinite;
-}
-@keyframes heroScrollLine {
-  0% { background-position: 0 -64px; }
-  100% { background-position: 0 64px; }
 }
 
 /* ----- Sections: more air, warm paper ----- */
@@ -1563,7 +1544,6 @@ footer { background: #0A101D; padding: 80px 60px 48px; }
   .hero-frame-corner.bl { bottom: 14px; left: 14px; }
   .hero-frame-corner.br { bottom: 14px; right: 14px; }
   .hero-watermark { font-size: 110px; right: -6%; bottom: -3%; }
-  .hero-scroll { display: none; }
 
   .btn { padding: 14px 34px; font-size: 14px; }
 
