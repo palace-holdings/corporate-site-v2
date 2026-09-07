@@ -272,6 +272,10 @@ header nav ul li a:hover { color: var(--v4-gold); }
   color: rgba(255, 255, 255, 0.78);
   background: rgba(255, 255, 255, 0.045);
 }
+.guideline-sign {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+}
 
 .cta-section {
   background: var(--v4-ink-soft);
