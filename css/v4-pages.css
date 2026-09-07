@@ -246,25 +246,32 @@ header nav ul li a:hover { color: var(--v4-gold); }
 .privacy-content,
 .guideline-document {
   padding: 56px 64px;
-  color: var(--v4-ink);
-  background: var(--v4-paper);
-  border-top: 1px solid var(--v4-gold);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border-top: 1px solid rgba(221, 199, 125, 0.48);
+  box-shadow: none;
 }
 .privacy-block h2,
 .guideline-document h2,
-.guideline-document h3 { color: var(--v4-ink); }
+.guideline-document h3 { color: #ffffff; }
 .privacy-block p,
 .privacy-block li,
-.guideline-document { color: #46515f; }
-.privacy-block + .privacy-block { border-top: 1px solid rgba(8, 21, 40, 0.1); padding-top: 36px; }
+.guideline-document { color: rgba(255, 255, 255, 0.8); }
+.privacy-content .privacy-block { color: rgba(255, 255, 255, 0.64) !important; }
+.privacy-block + .privacy-block { border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 36px; }
 .guideline-intro {
-  color: var(--v4-ink);
-  background: var(--v4-paper);
+  color: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.045);
   border-left-color: var(--v4-gold);
 }
-.guideline-item { border-bottom-color: rgba(8, 21, 40, 0.11); }
-.guideline-note { background: #ffffff; }
+.guideline-document .guideline-num,
+.guideline-document .guideline-item .inline-marker,
+.guideline-document .guideline-item li::before { color: var(--v4-gold); }
+.guideline-item { border-bottom-color: rgba(255, 255, 255, 0.12); }
+.guideline-note {
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.045);
+}
 
 .cta-section {
   background: var(--v4-ink-soft);
