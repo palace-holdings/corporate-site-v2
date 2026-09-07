@@ -91,6 +91,12 @@ header nav ul li a:hover { color: var(--v4-gold); }
 }
 
 /* Strengths */
+.strengths-lead {
+  font-family: var(--font-serif-ja);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .strengths-lead-sub,
 .strength-body p {
   color: rgba(255, 255, 255, 0.72);
